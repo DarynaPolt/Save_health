@@ -30,12 +30,17 @@ h2 {
 .skills-item {
     margin-bottom: 15px;
     padding-left: 20px;
-    border-left: 10px solid #c4c4c4;
-    color: #999999;
+    border-left: 10px solid #c1f1bb;
+    color: #666666;
 }
 
 .standard {
-    border-color: #a8e0a0;
+    border-color: #a8e0a1;
+    color: #666666;
+}
+
+.vip {
+    border-color: #86b97f;
     color: #666666;
 }
 
@@ -89,4 +94,30 @@ h2 {
     color: #999999;
 }
 
-.button
+.btn_health_wishes {
+    background-color: #a8e0a1; 
+    border-color: #86b97f;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px; 
+}
+
+.btn-buy-tablets {
+    background-color: #a8e0a1; 
+    border-color: #86b97f;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px; 
+}
