@@ -30,7 +30,7 @@ document.getElementById("btn_health_wishes").addEventListener("click", () => {
   console.log(countofpills);
   document.getElementById("count-of-tablets").innerText = "🥛".repeat(countofpills) + "❌".repeat(5 - countofpills);
   console.log("🥛".repeat(countofpills) + "❌".repeat(5 - countofpills));
-  if (countofpills --- 0) {
+  if (countofpills === 0) {
     console.log("countofpills - 0");
     document.getElementById("btn_health_wishes").style.display = "none";
   }
