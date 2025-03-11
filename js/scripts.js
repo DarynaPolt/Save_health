@@ -52,3 +52,18 @@ if (countofpills < 5) {
   document.getElementById("p-health-wishes").innerText = "У вас вже максимальна кількість молока.";
 }
 });
+
+let galleryImage = 1;
+
+document.getElementById("main-image").setAttribute('src', img/gallery/${galleryImage}.jpg);
+
+document.getElementById('right-arrow').addEventListener('click', () => {
+  galleryImage++;
+  console.log(galleryImage);
+
+  if (galleryImage > 3) { // Предполагаем, что у вас 3 изображения в галерее
+    galleryImage = 1; // Возвращаемся к первому изображению
+  }
+
+  document.getElementById("main-image").setAttribute('src', img/gallery/${galleryImage}.jpg);
+});
