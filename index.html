@@ -32,9 +32,48 @@
       </section>
 
 <section class="gallery">
-<img src="img/arrow-left-svgrepo-com.svg" alt="Стрілка вліво" id="left-arrow">
-<img src="img/gallery/1.jpg" alt="Головне зображення" id="main-image">
-<img src="img/arrow-right-svgrepo-com.svg" alt="Стрілка вправо" id="right-arrow">
+<img let galleryImage = 1;
+
+document.getElementById("main-image").setAttribute('src', img/gallery/${galleryImage}.jpg);
+
+document.getElementById('right-arrow').addEventListener('click', () => {
+  galleryImage++;
+  console.log(galleryImage);
+
+  if (galleryImage > 3) { // Предполагаем, что у вас 3 изображения в галерее
+    galleryImage = 1; // Возвращаемся к первому изображению
+  }
+
+  document.getElementById("main-image").setAttribute('src', img/gallery/${galleryImage}.jpg);
+});let galleryImage = 1;
+
+document.getElementById("main-image").setAttribute('src', img/gallery/${galleryImage}.jpg);
+
+document.getElementById('right-arrow').addEventListener('click', () => {
+  galleryImage++;
+  console.log(galleryImage);
+
+  if (galleryImage > 3) { // Предполагаем, что у вас 3 изображения в галерее
+    galleryImage = 1; // Возвращаемся к первому изображению
+  }
+
+  document.getElementById("main-image").setAttribute('src', img/gallery/${galleryImage}.jpg);
+});let galleryImage = 1;
+
+document.getElementById("main-image").setAttribute('src', img/gallery/${galleryImage}.jpg);
+
+document.getElementById('right-arrow').addEventListener('click', () => {
+  galleryImage++;
+  console.log(galleryImage);
+
+  if (galleryImage > 3) { // Предполагаем, что у вас 3 изображения в галерее
+    galleryImage = 1; // Возвращаемся к первому изображению
+  }
+
+  document.getElementById("main-image").setAttribute('src', img/gallery/${galleryImage}.jpg);
+});src="img/arrow-left-svgrepo-com.svg" alt="Стрілка вліво" id="left-arrow">
+<img  src="img/gallery/1.jpg" alt="Головне зображення" id="main-image">
+<img  src="img/arrow-right-svgrepo-com.svg" alt="Стрілка вправо" id="right-arrow">
 </section>
 
     <section class="wishes">
