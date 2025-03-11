@@ -53,17 +53,16 @@ if (countofpills < 5) {
 }
 });
 
-let galleryImage = 1;
+let galleryImage = 1
 
-document.getElementById("main-image").setAttribute('src', img/gallery/${galleryImage}.jpg);
+document.getElementById("main-image").setAttribute('src', `img/gallery/${galleryImage}.jpg`)
 
-document.getElementById('right-arrow').addEventListener('click', () => {
-  galleryImage++;
-  console.log(galleryImage);
+document.getElementById('right-arrow').addEventListener('click',()=>{
+    galleryImage++
+    console.log(galleryImage)
 
-  if (galleryImage > 3) { // Предполагаем, что у вас 3 изображения в галерее
-    galleryImage = 1; // Возвращаемся к первому изображению
-  }
+    if (galleryImage == 4) galleryImage = 1
 
-  document.getElementById("main-image").setAttribute('src', img/gallery/${galleryImage}.jpg);
-});
+
+    document.getElementById("main-image").setAttribute('src', `img/gallery/${galleryImage}.jpg`)
+})
