@@ -61,16 +61,16 @@ const arrayOfImages = [
 
 let galleryImage = 1
 
-document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage-1]}.jpg`)
+document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage - 1]}.jpg`)
 
 document.getElementById('right-arrow').addEventListener('click',()=>{
     galleryImage++
     console.log(galleryImage)
 
-    if (galleryImage == arrayOfImages.length) galleryImage = 1
+    if (galleryImage == arrayOfImages.length) galleryImage = 0
 
 
-    document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage-1]}.jpg`)
+    document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage]}.jpg`)
 })
 
 document.getElementById('left-arrow').addEventListener('click',()=>{
@@ -80,7 +80,7 @@ document.getElementById('left-arrow').addEventListener('click',()=>{
   if (galleryImage == 0) galleryImage = arrayOfImages.length
 
 
-  document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage-1]}.jpg`)
+  document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage - 1]}.jpg`)
 })
 
 
