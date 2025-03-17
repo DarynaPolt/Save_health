@@ -54,9 +54,9 @@ if (countofpills < 5) {
 });
 
 const arrayOfImages = [
-  "1.jpg",
-  "2.jpg",
-  "3.jpg"
+  "1",
+  "2",
+  "3"
 ]
 
 let galleryImage = 1
@@ -67,20 +67,20 @@ document.getElementById('right-arrow').addEventListener('click',()=>{
     galleryImage++
     console.log(galleryImage)
 
-    if (galleryImage == 4) galleryImage = 1
+    if (galleryImage == arrayOfImages.length) galleryImage = 1
 
 
-    document.getElementById("main-image").setAttribute('src', `img/gallery/${galleryImage}.jpg`)
+    document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage-1]}.jpg`)
 })
 
 document.getElementById('left-arrow').addEventListener('click',()=>{
   galleryImage--
   console.log(galleryImage)
 
-  if (galleryImage == 0) galleryImage = 3
+  if (galleryImage == 0) galleryImage = arrayOfImages.length
 
 
-  document.getElementById("main-image").setAttribute('src', `img/gallery/${galleryImage}.jpg`)
+  document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage-1]}.jpg`)
 })
 
 
