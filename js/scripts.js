@@ -53,9 +53,15 @@ if (countofpills < 5) {
 }
 });
 
+const arrayOfImages = [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg"
+]
+
 let galleryImage = 1
 
-document.getElementById("main-image").setAttribute('src', `img/gallery/${galleryImage}.jpg`)
+document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage-1]}.jpg`)
 
 document.getElementById('right-arrow').addEventListener('click',()=>{
     galleryImage++
@@ -66,3 +72,18 @@ document.getElementById('right-arrow').addEventListener('click',()=>{
 
     document.getElementById("main-image").setAttribute('src', `img/gallery/${galleryImage}.jpg`)
 })
+
+document.getElementById('left-arrow').addEventListener('click',()=>{
+  galleryImage--
+  console.log(galleryImage)
+
+  if (galleryImage == 0) galleryImage = 3
+
+
+  document.getElementById("main-image").setAttribute('src', `img/gallery/${galleryImage}.jpg`)
+})
+
+
+// додати тінь рівномірну при наведені на кнопку
+// 3 клік на кнопку відображати це сіра щоб ставала актіве
+// реалізувати завантаження на зобр ажень з маисчву *
