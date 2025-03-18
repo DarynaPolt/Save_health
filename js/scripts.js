@@ -83,7 +83,56 @@ document.getElementById('left-arrow').addEventListener('click',()=>{
   document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage - 1]}.jpg`)
 })
 
+const arrayOfObjects = [
+  {
+    id: 1,
+    title:"Аевіт",
+    photo:"",
+    decsription:"",
+    rating: 4,
+    type: ""
+  },
+  {
+    id: 2,
+    title:"Вітамін С",
+    photo:"",
+    decsription:"",
+    rating: 3,
+    type: ""
+  },
+  {
+    id: 3,
+    title:"Вітамін D",
+    photo:"",
+    decsription:"",
+    rating: 5,
+    type: ""
+  },
+  {
+    id: 4,
+    title:"Вітамін B3",
+    photo:"",
+    decsription:"",
+    rating: 5,
+    type: ""
+  },
+  {
+    id: 5,
+    title:"Омега-3",
+    photo:"",
+    decsription:"",
+    rating: 4,
+    type: ""
+  },
+]
 
-// додати тінь рівномірну при наведені на кнопку
-// 3 клік на кнопку відображати це сіра щоб ставала актіве
-// реалізувати завантаження на зобр ажень з маисчву *
+console.log(arrayOfObjects)
+
+arrayOfObjects.forEach((item)=>{
+  console.log(item)
+let divVitamin = document.createElement('div')
+divVitamin.innerText = item.title
+divVitamin.classList.add('vitamin')
+
+document.getElementById('p-vitamin').appendChild(divVitamin)
+})
