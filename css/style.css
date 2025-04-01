@@ -170,7 +170,7 @@ h2 {
     border-radius: 5px;
     box-shadow: #999999 5px 5px 10px;
     width: 150px;
-    height: 300px;
+    min-height: 300px;
   }
 
   .vitamin img {
@@ -211,4 +211,8 @@ h2 {
     border-bottom: 1px solid #399aa1;
     background-color: #57cac1;
     font-size: 14px;
+  }
+  
+  .vitamin div {
+    margin-top: auto;
   }
