@@ -172,3 +172,43 @@ h2 {
     width: 150px;
     height: 300px;
   }
+
+  .vitamin img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+  /* id */
+.vitamin p:first-child {
+    align-self: flex-end;
+    font-size: 10px;
+    color: #399aa1;
+  }
+  
+  .vitamin h3 {
+    font-size: 24px;
+  }
+  
+  .vitamin img {
+    width: 64px;
+    height: 64px;
+  }
+  
+  /* description */
+  
+  .vitamin div {
+    margin-top: auto;
+;
+  }
+  
+  /* type */
+  
+  .vitamin p:last-child {
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #399aa1;
+    border-bottom: 1px solid #399aa1;
+    background-color: #57cac1;
+    font-size: 14px;
+  }
