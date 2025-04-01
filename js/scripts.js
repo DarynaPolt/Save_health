@@ -83,56 +83,76 @@ document.getElementById('left-arrow').addEventListener('click',()=>{
   document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage - 1]}.jpg`)
 })
 
-const arrayOfObjects = [
+const arrayOfVitamins = [
   {
     id: 1,
-    title:"Аевіт",
+    title:"Вітамін A",
     photo:"",
-    decsription:"",
+    description:"Для шкіри, волосся та нігтів, антиоксидант.",
     rating: 4,
-    type: ""
+    type: "Жиророзчинні вітаміни"
   },
   {
     id: 2,
-    title:"Вітамін С",
+    title:"Вітамін B",
     photo:"",
-    decsription:"",
+    description:"Антиоксидант, імунітет, засвоєння заліза, колаген.",
     rating: 3,
-    type: ""
+    type: "Водорозчинні вітаміни"
   },
   {
     id: 3,
     title:"Вітамін D",
     photo:"",
-    decsription:"",
+    description:"Засвоєння кальцію та фосфору, кістки, зуби, імунітет.",
     rating: 5,
-    type: ""
+    type: "Жиророзчинні вітаміни"
   },
   {
     id: 4,
-    title:"Вітамін B3",
+    title:"Вітамін E",
     photo:"",
-    decsription:"",
+    description:"Метаболізм, нервова система, шкіра.",
     rating: 5,
-    type: ""
+    type: "Водорозчинні вітаміни"
   },
   {
     id: 5,
     title:"Омега-3",
     photo:"",
-    decsription:"",
+    description:"Для серця, мозку, зору, протизапальна дія.",
     rating: 4,
-    type: ""
+    type: "Жирні кислоти"
   },
-]
+];
 
-console.log(arrayOfObjects)
+  console.log(arrayOfVitamins);
 
-arrayOfObjects.forEach((item)=>{
-  console.log(item)
-let divVitamin = document.createElement('div')
-divVitamin.innerText = item.title
-divVitamin.classList.add('vitamin')
 
-document.getElementById('p-vitamin').appendChild(divVitamin)
-})
+
+ arrayOfVitamins.forEach((vitamin) => {
+
+     console.log(vitamin);
+
+      let vitaminDiv = document.createElement("div");
+      vitaminDiv.innerText = vitamin.title;
+
+     vitaminDiv.classList.add("vitamin");
+    
+
+   document.getElementById("p-vitamin").appendChild(vitaminDiv);
+
+
+
+     vitaminDiv.innerHTML = `
+
+        <p>${vitamin.id}</p>
+         <h3>${vitamin.title}</h3>
+         <img src="img/vitamins/${vitamin.id}.png" alt="">
+         <p>${vitamin.description}</p>
+         <div>
+             <p>${"❤️".repeat(vitamin.rating) + "♡".repeat(5 - vitamin.rating)}</p>
+            <p>${vitamin.type}</p>
+          </div>
+`;
+ });
