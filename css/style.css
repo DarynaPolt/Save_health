@@ -179,6 +179,11 @@ h2 {
     margin: 0 auto;
     display: block;
   }
+  /* hover */
+  .vitamin:hover p:first-child {
+    color: #57cac1;
+  }
+  
   /* id */
 .vitamin p:first-child {
     align-self: flex-end;
@@ -216,3 +221,10 @@ h2 {
   .vitamin div {
     margin-top: auto;
   }
+
+  /* Ефект при наведенні */
+.vitamin:hover {
+    transform: translateY(-5px);
+    box-shadow: 3px 3px 12px rgba(21, 114, 156, 0.404);
+    color: #2ea399;
+}
