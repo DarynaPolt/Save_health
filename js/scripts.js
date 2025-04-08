@@ -83,76 +83,43 @@ document.getElementById('left-arrow').addEventListener('click',()=>{
   document.getElementById("main-image").setAttribute('src', `img/gallery/${arrayOfImages[galleryImage - 1]}.jpg`)
 })
 
-const arrayOfVitamins = [
-  {
-    id: 1,
-    title:"Вітамін A",
-    photo:"",
-    description:"Для шкіри, волосся та нігтів, антиоксидант.",
-    rating: 4,
-    type: "Жиророзчинні вітаміни"
-  },
-  {
-    id: 2,
-    title:"Вітамін B",
-    photo:"",
-    description:"Антиоксидант, імунітет, засвоєння заліза, колаген.",
-    rating: 3,
-    type: "Водорозчинні вітаміни"
-  },
-  {
-    id: 3,
-    title:"Вітамін D",
-    photo:"",
-    description:"Засвоєння кальцію та фосфору, кістки, зуби, імунітет.",
-    rating: 5,
-    type: "Жиророзчинні вітаміни"
-  },
-  {
-    id: 4,
-    title:"Вітамін E",
-    photo:"",
-    description:"Метаболізм, нервова система, шкіра.",
-    rating: 5,
-    type: "Водорозчинні вітаміни"
-  },
-  {
-    id: 5,
-    title:"Омега-3",
-    photo:"",
-    description:"Для серця, мозку, зору, протизапальна дія.",
-    rating: 4,
-    type: "Жирні кислоти"
-  },
-];
-
-  console.log(arrayOfVitamins);
 
 
 
- arrayOfVitamins.forEach((vitamin) => {
+document.getElementById("left-arrow").addEventListener("click", () => {
+  galleryImage--;
+  if (galleryImage < 1) {
+    galleryImage = arrayOfImages.length;
+  }
+  document
+    .getElementById("main-image")
+    .setAttribute("src", `../img/gallery/${arrayOfImages[galleryImage - 1]}.jpg`);
+});
 
-     console.log(vitamin);
 
+  fetch('js/vitamins.json')
+  .then((response) => response.json()) // Fixed parentheses
+  .then((data) => {
+    data.forEach((vitamin, index) => { // Fixed arrow function syntax
       let vitaminDiv = document.createElement("div");
-      vitaminDiv.innerText = vitamin.title;
+      vitaminDiv.classList.add("vitamin");
 
-     vitaminDiv.classList.add("vitamin");
-    
+      // Append the vitamin div to the container
+      document.getElementById("p-vitamin").appendChild(vitaminDiv);
 
-   document.getElementById("p-vitamin").appendChild(vitaminDiv);
-
-
-
-     vitaminDiv.innerHTML = `
-
+      // Populate the vitamin div with content
+      vitaminDiv.innerHTML = `
         <p>${vitamin.id}</p>
-         <h3>${vitamin.title}</h3>
-         <img src="img/vitamins/${vitamin.id}.png" alt="">
-         <p>${vitamin.description}</p>
-         <div>
-             <p>${"❤️".repeat(vitamin.rating) + "♡".repeat(5 - vitamin.rating)}</p>
-            <p>${vitamin.type}</p>
-          </div>
-`;
- });
+        <h3>${vitamin.title}</h3>
+        <img src='img/vitamins/${arrayOfImages[index]}.png' alt="${vitamin.title}" onerror="this.onerror=null; this.src='img/vitamins/1.png';">
+        <p>${vitamin.description}</p>
+        <div> 
+          <p>${"💖".repeat(vitamin.rating) + "🤍".repeat(5 - vitamin.rating)}</p>
+          <p>${vitamin.type}</p> 
+        </div>
+      `;
+    });
+  })
+  .catch((error) => {
+    console.error("Error fetching vitamins data:", error);
+  });
